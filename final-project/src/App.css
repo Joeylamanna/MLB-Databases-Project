@@ -1,0 +1,40 @@
+/* Importing a fancy font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+.app-container {
+  padding: 20px;
+  text-align: center;
+  position: relative; /* For absolute positioning of logos */
+}
+
+.app-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  margin-right: 10px;
+}
+
+.output-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  width: 50%; /* Adjust the width as desired */
+}
+
+/* Styling the Yankees logo in the top left corner */
+.corner-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px; /* Adjust the size as desired */
+  height: 50px; /* Adjust the size as desired */
+}
