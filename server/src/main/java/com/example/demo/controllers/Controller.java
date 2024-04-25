@@ -19,8 +19,8 @@ public class Controller {
     Repository repository;
     
     @GetMapping("/")
-    public List<?> getInfo(@RequestParam(name="query")String query, @RequestParam(name="table")String table) {
-        return repository.get(query, table);
+    public List<?> getInfo(@RequestParam(name="query")String query) {
+        return repository.get(query);
     } 
 
     @PutMapping("/")

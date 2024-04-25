@@ -8,7 +8,6 @@ import yankeesLogo from './yankees-logo.png';
 function App() {
   const [text, setText] = useState('');
   const [selectedOption, setSelectedOption] = useState('Create');
-  const [tableSelectedOption, setTableSelectedOption] = useState('Player')
   const [data, setData] = useState()
 
   // Function to handle changes in the input field
@@ -21,21 +20,18 @@ function App() {
     setSelectedOption(event.target.value);
   };
 
-  const handleTableDropdownChange = (event) => {
-    setTableSelectedOption(event.target.value);
-  };
-
-  const headers = data && data.length > 0 ? Object.keys(data[0]) : [];
+  const headers = data && data.length > 0 ? 
+    Object.keys(data[0]).filter(key => data.some(item => item[key] !== undefined && item[key] !== null)) 
+    : [];
   const callDatabase = async() => {
     if (selectedOption === "Create") {
-      await axios.post(`http://localhost:8080?method=${"Create"}&query=${text}`)
+      await axios.post(`http://localhost:8080?query=${text}`)
     } else if (selectedOption === "Read") {
-      const res = await axios.get(`http://localhost:8080?method=${"Read"}&query=${text}&table=${tableSelectedOption}`)
+      const res = await axios.get(`http://localhost:8080?query=${text}`)
       setData(res.data)
-      console.log(res.data)
     }
     else {
-      await axios.put(`http://localhost:8080?method=${"Create"}&query=${text}`)
+      await axios.put(`http://localhost:8080?query=${text}`)
     }
   }
 
@@ -48,16 +44,6 @@ function App() {
           <option value="Create">Create</option>
           <option value="Read">Read</option>
           <option value="Update">Update</option>
-        </select>
-        <select value={tableSelectedOption} onChange={handleTableDropdownChange} style={{ marginRight: '10px' }}>
-          <option value="Owner">Owner</option>
-          <option value="General_Manager">General Manager</option>
-          <option value="Player">Player</option>
-          <option value="Hitter">Hitter</option>
-          <option value="Pitcher">Pitcher</option>
-          <option value="Coach">Coach</option>
-          <option value="PlayerJoinHitter">PlayerJoinHitter</option>
-          <option value="PlayerJoinPitcher">PlayerJoinPitcher</option>
         </select>
         <input
           type="text"
