@@ -6,8 +6,8 @@ import axios from 'axios'
 import yankeesLogo from './yankees-logo.png';
 
 function App() {
-  const [text, setText] = useState(''); // State to hold the input text
-  const [selectedOption, setSelectedOption] = useState('Create'); // State to hold the selected dropdown option
+  const [text, setText] = useState('');
+  const [selectedOption, setSelectedOption] = useState('Create');
   const [tableSelectedOption, setTableSelectedOption] = useState('Player')
   const [data, setData] = useState()
 
@@ -41,15 +41,9 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* New York Yankees logo in the top left corner */}
       <img src={yankeesLogo} alt="Yankees Logo" className="corner-logo top-left" />
-
-      {/* Title */}
       <h1 className="app-title">New York Yankees Database</h1>
-
-      {/* Dropdown menu, input field, and Enter button */}
       <div className="input-container">
-        {/* Dropdown menu */}
         <select value={selectedOption} onChange={handleDropdownChange} style={{ marginRight: '10px' }}>
           <option value="Create">Create</option>
           <option value="Read">Read</option>
@@ -65,20 +59,15 @@ function App() {
           <option value="PlayerJoinHitter">PlayerJoinHitter</option>
           <option value="PlayerJoinPitcher">PlayerJoinPitcher</option>
         </select>
-
-        {/* Input field */}
         <input
           type="text"
           value={text}
           onChange={handleInputChange}
           placeholder="Type something here..."
         />
-
-        {/* Enter button */}
         <button style={{ marginLeft: '10px' }} onClick={callDatabase}>Enter</button>
       </div>
 
-      {/* Output box */}
       <h1>Response</h1>
       <table>
         <thead>
