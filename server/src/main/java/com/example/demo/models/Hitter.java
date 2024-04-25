@@ -10,17 +10,17 @@ public class Hitter {
     Integer rbis;
     Integer singles;
     Integer stolen_bases;
-    double batting_average;
-    double obp;
+    Double batting_average;
+    Double obp;
     Integer strikeouts;
-    double ops;
+    Double ops;
     Integer caught_stealing;
     Integer triples;
     Integer walks;
     Integer doubles;
     Integer homeruns;
     Integer plate_appearances;
-    double slugging;
+    Double slugging;
     Integer total_bases;
     Integer gdp;
     Integer hbp;
@@ -80,19 +80,19 @@ public class Hitter {
         this.stolen_bases = stolen_bases;
     }
 
-    public double getBatting_average() {
+    public Double getBatting_average() {
         return this.batting_average;
     }
 
-    public void setBatting_average(double batting_average) {
+    public void setBatting_average(Double batting_average) {
         this.batting_average = batting_average;
     }
 
-    public double getObp() {
+    public Double getObp() {
         return this.obp;
     }
 
-    public void setObp(double obp) {
+    public void setObp(Double obp) {
         this.obp = obp;
     }
 
@@ -104,11 +104,11 @@ public class Hitter {
         this.strikeouts = strikeouts;
     }
 
-    public double getOps() {
+    public Double getOps() {
         return this.ops;
     }
 
-    public void setOps(double ops) {
+    public void setOps(Double ops) {
         this.ops = ops;
     }
 
@@ -160,11 +160,11 @@ public class Hitter {
         this.plate_appearances = plate_appearances;
     }
 
-    public double getSlugging() {
+    public Double getSlugging() {
         return this.slugging;
     }
 
-    public void setSlugging(double slugging) {
+    public void setSlugging(Double slugging) {
         this.slugging = slugging;
     }
 

@@ -16,7 +16,7 @@ public class PlayerJoinPitcher {
     Integer wins;
     Integer games_started;
     Integer earned_runs;
-    double whip;
+    Double whip;
     Integer strikeouts;
     Integer saves;
     Integer walks;
@@ -25,13 +25,13 @@ public class PlayerJoinPitcher {
     Integer shutouts;
     Integer hits;
     Integer homeruns;
-    double era;
-    double h9;
-    double hr9;
-    double bb9;
-    double so9;
-    double so_per_walk;
-    double fip;
+    Double era;
+    Double h9;
+    Double hr9;
+    Double bb9;
+    Double so9;
+    Double so_per_walk;
+    Double fip;
     Integer wild_pitches;
     Integer balks;
     Integer hbp;
@@ -139,11 +139,11 @@ public class PlayerJoinPitcher {
         this.earned_runs = earned_runs;
     }
 
-    public double getWhip() {
+    public Double getWhip() {
         return this.whip;
     }
 
-    public void setWhip(double whip) {
+    public void setWhip(Double whip) {
         this.whip = whip;
     }
 
@@ -211,59 +211,59 @@ public class PlayerJoinPitcher {
         this.homeruns = homeruns;
     }
 
-    public double getEra() {
+    public Double getEra() {
         return this.era;
     }
 
-    public void setEra(double era) {
+    public void setEra(Double era) {
         this.era = era;
     }
 
-    public double getH9() {
+    public Double getH9() {
         return this.h9;
     }
 
-    public void setH9(double h9) {
+    public void setH9(Double h9) {
         this.h9 = h9;
     }
 
-    public double getHr9() {
+    public Double getHr9() {
         return this.hr9;
     }
 
-    public void setHr9(double hr9) {
+    public void setHr9(Double hr9) {
         this.hr9 = hr9;
     }
 
-    public double getBb9() {
+    public Double getBb9() {
         return this.bb9;
     }
 
-    public void setBb9(double bb9) {
+    public void setBb9(Double bb9) {
         this.bb9 = bb9;
     }
 
-    public double getSo9() {
+    public Double getSo9() {
         return this.so9;
     }
 
-    public void setSo9(double so9) {
+    public void setSo9(Double so9) {
         this.so9 = so9;
     }
 
-    public double getSo_per_walk() {
+    public Double getSo_per_walk() {
         return this.so_per_walk;
     }
 
-    public void setSo_per_walk(double so_per_walk) {
+    public void setSo_per_walk(Double so_per_walk) {
         this.so_per_walk = so_per_walk;
     }
 
-    public double getFip() {
+    public Double getFip() {
         return this.fip;
     }
 
-    public void setFip(double fip) {
+    public void setFip(Double fip) {
         this.fip = fip;
     }
 
