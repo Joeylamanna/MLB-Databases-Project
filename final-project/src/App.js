@@ -6,10 +6,16 @@ import yankeesLogo from './yankees-logo.png';
 
 function App() {
   const [text, setText] = useState(''); // State to hold the input text
+  const [selectedOption, setSelectedOption] = useState('Create'); // State to hold the selected dropdown option
 
   // Function to handle changes in the input field
   const handleInputChange = (event) => {
     setText(event.target.value);
+  };
+
+  // Function to handle changes in the dropdown menu
+  const handleDropdownChange = (event) => {
+    setSelectedOption(event.target.value);
   };
 
   return (
@@ -20,15 +26,25 @@ function App() {
       {/* Title */}
       <h1 className="app-title">New York Yankees Database</h1>
 
-      {/* Input field and Enter button */}
+      {/* Dropdown menu, input field, and Enter button */}
       <div className="input-container">
+        {/* Dropdown menu */}
+        <select value={selectedOption} onChange={handleDropdownChange} style={{ marginRight: '10px' }}>
+          <option value="Create">Create</option>
+          <option value="Read">Read</option>
+          <option value="Update">Update</option>
+        </select>
+
+        {/* Input field */}
         <input
           type="text"
           value={text}
           onChange={handleInputChange}
           placeholder="Type something here..."
         />
-        <button>Enter</button>
+
+        {/* Enter button */}
+        <button style={{ marginLeft: '10px' }}>Enter</button>
       </div>
 
       {/* Output box */}
